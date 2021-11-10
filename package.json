@@ -1,0 +1,29 @@
+{
+  "name": "shoutrrrd-js",
+  "version": "1.0.2",
+  "description": "A client for shoutrrrd (unofficial shoutrrr daemon)",
+  "main": "build/index.js",
+  "types": "./@types/index.d.ts",
+  "author": "AdriDevelopsThings",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "private": false,
+  "dependencies": {
+    "node-fetch": "^3.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write src/**/*.ts",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint"
+  },
+  "files": ["build/**/*", "@types/index.d.ts"]
+}
