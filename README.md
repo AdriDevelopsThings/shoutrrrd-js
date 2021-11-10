@@ -12,6 +12,7 @@ Set up a shoutrrrd server and configure it.
 import { Shoutrrr } from 'shoutrrrd-js'
 
 const shoutrrr = new Shoutrrr('http://localhost:8000')
+
 shoutrrr.send('discord', 'This is a notification message that will be displayed on discord.')
     .then(() => console.log('Message sent'))
     .catch((error) => console.log(`Error ${error} happend while sending message.`))
@@ -28,7 +29,7 @@ main()
 Following errors can be happen while sending a message:
 ```javascript
 import {
-    ServiceDoesNotExists, // when the service on the service doesn't exist this exception will be thrown.
+    ServiceDoesNotExists, // when the service on the server doesn't exist this exception will be thrown.
     InternalServerError 
 } from 'shoutrrr-js'
 ```
